@@ -25,6 +25,8 @@ public class CadastroActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,10 +46,6 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
-    public void backTelaLogin(View v){
-        Intent i = new Intent(this, LoginActivity.class);
-        startActivity(i);
-    }
 
     private void validarCampos() {
         String nome = campoNome.getText().toString().trim();
@@ -94,7 +92,7 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void abrirHome() {
-        Toast.makeText(this, "Bem-Vindo!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Bem-Vindo! "+campoNome.getText(), Toast.LENGTH_LONG).show();
         Intent i = new Intent(CadastroActivity.this, MainActivity.class);
         startActivity(i);
         finish();
