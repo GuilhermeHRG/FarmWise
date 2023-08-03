@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -81,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void abrirHome() {
-        Toast.makeText(this, "Bem-Vindo!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Bem-Vindo! ", Toast.LENGTH_LONG).show();
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(i);
         finish();
